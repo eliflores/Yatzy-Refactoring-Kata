@@ -53,7 +53,6 @@ public class Yatzy {
         assert dices.length <= MAX_ALLOWED_DICES;
     }
 
-
     public static int ones(int... dices) {
         return sumDice(1, dices);
     }
@@ -65,7 +64,6 @@ public class Yatzy {
     public static int threes(int... dices) {
         return sumDice(3, dices);
     }
-
 
     public static int fours(int... dices) {
         return sumDice(4, dices);
@@ -93,56 +91,6 @@ public class Yatzy {
                 return (i + 1) * 4;
         return 0;
     }
-
-    public static int three_of_a_kind(int d1, int d2, int d3, int d4, int d5) {
-        int[] t;
-        t = new int[6];
-        t[d1 - 1]++;
-        t[d2 - 1]++;
-        t[d3 - 1]++;
-        t[d4 - 1]++;
-        t[d5 - 1]++;
-        for (int i = 0; i < 6; i++)
-            if (t[i] >= 3)
-                return (i + 1) * 3;
-        return 0;
-    }
-
-    public static int smallStraight(int d1, int d2, int d3, int d4, int d5) {
-        int[] tallies;
-        tallies = new int[6];
-        tallies[d1 - 1] += 1;
-        tallies[d2 - 1] += 1;
-        tallies[d3 - 1] += 1;
-        tallies[d4 - 1] += 1;
-        tallies[d5 - 1] += 1;
-        if (tallies[0] == 1 &&
-                tallies[1] == 1 &&
-                tallies[2] == 1 &&
-                tallies[3] == 1 &&
-                tallies[4] == 1)
-            return 15;
-        return 0;
-    }
-
-    public static int largeStraight(int d1, int d2, int d3, int d4, int d5) {
-        int[] tallies;
-        tallies = new int[6];
-        tallies[d1 - 1] += 1;
-        tallies[d2 - 1] += 1;
-        tallies[d3 - 1] += 1;
-        tallies[d4 - 1] += 1;
-        tallies[d5 - 1] += 1;
-        if (tallies[1] == 1 &&
-                tallies[2] == 1 &&
-                tallies[3] == 1 &&
-                tallies[4] == 1
-                && tallies[5] == 1)
-            return 20;
-        return 0;
-    }
-
-
 }
 
 

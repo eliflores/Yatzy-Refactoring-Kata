@@ -10,5 +10,4 @@ public class FullHouseTest {
         assertEquals(18, new FullHouse().score(6, 2, 2, 2, 6));
         assertEquals(0, new FullHouse().score(2, 3, 4, 5, 6));
     }
-
 }
