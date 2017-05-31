@@ -1,6 +1,6 @@
-import org.junit.*;
+import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 public class YatzyTest {
 
@@ -42,20 +42,7 @@ public class YatzyTest {
     public void testSixes() {
         assertEquals(0, Yatzy.sixes(4, 4, 4, 5, 5));
         assertEquals(6, Yatzy.sixes(4, 4, 6, 5, 5));
-        assertEquals(18,Yatzy.sixes(6, 5, 6, 6, 5));
-    }
-
-    @Test
-    public void one_pair() {
-        assertEquals(6, Yatzy.score_pair(3, 4, 3, 5, 6));
-        assertEquals(10, Yatzy.score_pair(5, 3, 3, 3, 5));
-        assertEquals(12, Yatzy.score_pair(5, 3, 6, 6, 5));
-    }
-
-    @Test
-    public void two_Pair() {
-        assertEquals(16, Yatzy.two_pair(3, 3, 5, 4, 5));
-        assertEquals(16, Yatzy.two_pair(3, 3, 5, 5, 5));
+        assertEquals(18, Yatzy.sixes(6, 5, 6, 6, 5));
     }
 
     @Test
@@ -84,12 +71,6 @@ public class YatzyTest {
         assertEquals(20, Yatzy.largeStraight(6, 2, 3, 4, 5));
         assertEquals(20, Yatzy.largeStraight(2, 3, 4, 5, 6));
         assertEquals(0, Yatzy.largeStraight(1, 2, 2, 4, 5));
-    }
-
-    @Test
-    public void fullHouse() {
-        assertEquals(18, Yatzy.fullHouse(6, 2, 2, 2, 6));
-        assertEquals(0, Yatzy.fullHouse(2, 3, 4, 5, 6));
     }
 
     @Test
