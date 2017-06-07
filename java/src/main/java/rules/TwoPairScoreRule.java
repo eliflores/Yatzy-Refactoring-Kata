@@ -4,13 +4,7 @@ public class TwoPairScoreRule implements ScoringRule {
 
     @Override
     public int score(int... dices) {
-        int[] counts = new int[6];
-
-        for (int i = 0; i < dices.length; i++) {
-            int dice = dices[i];
-            counts[dice - 1]++;
-
-        }
+        int[] counts = getTallies(dices);
 
         int n = 0;
         int score = 0;

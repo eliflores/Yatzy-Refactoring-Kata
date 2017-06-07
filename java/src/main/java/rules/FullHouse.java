@@ -4,21 +4,12 @@ public class FullHouse implements ScoringRule {
 
     @Override
     public int score(int... dices) {
-        int[] tallies;
+        int[] tallies = getTallies(dices);
         boolean _2 = false;
         int i;
         int _2_at = 0;
         boolean _3 = false;
         int _3_at = 0;
-
-
-        tallies = new int[6];
-        //TODO remove dup code
-        for (i = 0; i < dices.length; i++) {
-            int dice = dices[i];
-            tallies[dice - 1]++;
-
-        }
 
         for (i = 0; i != 6; i += 1)
             if (tallies[i] == 2) {
