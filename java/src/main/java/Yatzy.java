@@ -1,6 +1,5 @@
 public class Yatzy {
 
-    private static final int MAX_ALLOWED_DICES = 5;
     protected int[] dice; //TODO remove?
 
     //TODO remove?
@@ -32,49 +31,6 @@ public class Yatzy {
             if (counts[i] == 5)
                 return 50;
         return 0;
-    }
-
-    //TODO rename?
-    private static int sumDice(int target, int... dices) {
-        assertDicesInRange(dices);
-        int sum = 0;
-        for (int i = 0; i < dices.length; i++) {
-            int diceValue = dices[i];
-            if (diceValue == target) {
-                sum += diceValue;
-            }
-        }
-
-        return sum;
-    }
-
-    //TODO remove
-    private static void assertDicesInRange(int[] dices) {
-        assert dices.length <= MAX_ALLOWED_DICES;
-    }
-
-    public static int ones(int... dices) {
-        return sumDice(1, dices);
-    }
-
-    public static int twos(int... dices) {
-        return sumDice(2, dices);
-    }
-
-    public static int threes(int... dices) {
-        return sumDice(3, dices);
-    }
-
-    public static int fours(int... dices) {
-        return sumDice(4, dices);
-    }
-
-    public static int fives(int... dices) {
-        return sumDice(5, dices);
-    }
-
-    public static int sixes(int... dices) {
-        return sumDice(6, dices);
     }
 }
 
