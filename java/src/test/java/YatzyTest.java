@@ -46,12 +46,6 @@ public class YatzyTest {
     }
 
     @Test
-    public void four_of_a_knd() {
-        assertEquals(12, Yatzy.four_of_a_kind(3, 3, 3, 3, 5));
-        assertEquals(20, Yatzy.four_of_a_kind(5, 5, 5, 4, 5));
-    }
-
-    @Test
     public void chance_scores_sum_of_all_dice() {
         int expected = 15;
         int actual = Yatzy.chance(2, 3, 4, 5, 1);
